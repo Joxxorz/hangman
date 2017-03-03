@@ -45,7 +45,6 @@ def playGame():
     finalAnswer = ""
     compKnowsFinal = None
     compKnowsFinal = ""
-    del lst[:]
     compKnows = []
 
     print('Hi! Lets play hangman!')
@@ -56,7 +55,7 @@ def playGame():
 
     while True:
         userGuess = str(raw_input('Your guess: '))
-        userGuess = userGuess.upper()
+        userGuess = userGuess.lower()
         if finalAnswer != theAnswer:
             if lives == 0:
                 print('I\'m sorry, you have lost.')
